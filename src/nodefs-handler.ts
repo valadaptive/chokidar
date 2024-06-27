@@ -372,7 +372,7 @@ export default class NodeFsHandler {
     if (parent.has(basename)) return;
 
     const listener = async (path, newStats) => {
-      console.log({path, newStats});
+      console.log({path, newStats, time: performance.now()});
       if (!this.fsw._throttle(THROTTLE_MODE_WATCH, file, 5)) return;
       if (!newStats || newStats.mtimeMs === 0) {
         try {
