@@ -46,7 +46,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
-    "test": "npm run build && npm run lint && node --test"
+    "test": "npm run build && npm run lint && node --test --test-name-pattern \"when previously deleted file\""
   },
   "keywords": [
     "fs",
